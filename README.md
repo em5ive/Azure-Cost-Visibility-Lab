@@ -86,7 +86,7 @@ The alerting architecture uses two notification paths to improve notification re
 When an alert fires, the Action Group can send an email notification directly while also triggering the Logic App, which provides a secondary automated email path.
 
 
-```text
+```
 Storage Accounts
        │
        ▼
@@ -108,6 +108,7 @@ Direct Email   Logic App
                    ▼
              Secondary Email
 
+```
 
 ## Identity and Access Management
 
@@ -151,10 +152,13 @@ Azure CLI scripts are being developed to reproduce the environment programmatica
 Planned deployment structure:
 
 
+```
 scripts/
 ├── deploy.sh
 ├── configure-monitoring.sh
 └── configure-rbac.sh
+
+```
 
 ### Planned: Automated Cloud Governance
 
