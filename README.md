@@ -85,13 +85,30 @@ The alerting architecture uses two notification paths to improve notification re
 
 When an alert fires, the Action Group can send an email notification directly while also triggering the Logic App, which provides a secondary automated email path.
 
-'
-                         ┌──→ Direct Email Notification
-                         │
-Alert Rule → Action Group
-                         │
-                         └──→ Logic App → Email Notification
-                         
+
+```text
+Storage Accounts
+       │
+       ▼
+ Azure Monitor
+       │
+       ▼
+ Log Analytics
+       │
+       ▼
+ Log Search Alert
+       │
+       ▼
+   Action Group
+      /       \
+     /         \
+    ▼           ▼
+Direct Email   Logic App
+                   │
+                   ▼
+             Secondary Email
+
+
 ## Identity and Access Management
 
 The environment uses Microsoft Entra ID and Azure RBAC to implement role-based access.
