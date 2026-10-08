@@ -18,7 +18,7 @@ A visualization layer using Azure Workbooks and KQL is currently being developed
 
 ## Architecture
 
-![Azure Architecture](docs/architecture.png)
+![Azure Architecture](documents/architecture.png)
 
 ### Current Data Flow
 
